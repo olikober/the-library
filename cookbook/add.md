@@ -4,7 +4,7 @@
 Register a new skill, agent, or prompt in the library catalog.
 
 ## Input
-The user provides: name, description, source, and optionally type and dependencies.
+The user provides: name, description, source, and optionally groups, type and dependencies.
 
 ## Steps
 
@@ -42,6 +42,7 @@ Read `library.yaml`, add the new entry under the correct section:
 - name: <name>
   description: <description>
   source: <source>
+  group: [<groups>]  # omit if no dependencies
   requires: [<typed:refs>]  # omit if no dependencies
 ```
 

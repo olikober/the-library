@@ -1,7 +1,7 @@
 ---
 name: library
 description: Private skill distribution system. Use when the user wants to install, use, add, push, remove, sync, list, or search for skills, agents, or prompts from their private library catalog. Triggers on /library commands or mentions of library, skill distribution, or agentic management.
-argument-hint: [command or prompt] [name or details]
+argument-hint: "[command or prompt] [name or details]"
 ---
 
 # The Library
@@ -12,9 +12,9 @@ A meta-skill for private-first distribution of agentics (skills, agents, and pro
 
 > Update these after forking and cloning the library repo.
 
-- **LIBRARY_REPO_URL**: `<your forked repo url>`
-- **LIBRARY_YAML_PATH**: `~/.claude/skills/library/library.yaml`
-- **LIBRARY_SKILL_DIR**: `~/.claude/skills/library/`
+- **LIBRARY_REPO_URL**: `https://github.com/olikober/the-library.git`
+- **LIBRARY_YAML_PATH**: `~/.agents/skills/library/library.yaml`
+- **LIBRARY_SKILL_DIR**: `~/.agents/skills/library/`
 
 ## How It Works
 
@@ -113,14 +113,14 @@ By default, items are installed to the **default** directory from `library.yaml`
 ```yaml
 default_dirs:
     skills:
-        - default: .claude/skills/
-        - global: ~/.claude/skills/
+        - default: .agents/skills/
+        - global: ~/.agents/skills/
     agents:
-        - default: .claude/agents/
-        - global: ~/.claude/agents/
+        - default: .agents/agents/
+        - global: ~/.agents/agents/
     prompts:
-        - default: .claude/commands/
-        - global: ~/.claude/commands/
+        - default: .agents/commands/
+        - global: ~/.agents/commands/
 ```
 
 - If the user says "global" or "globally", use the `global` directory.
@@ -141,20 +141,21 @@ This keeps the catalog in sync across devices.
 ```yaml
 default_dirs:
   skills:
-    - default: .claude/skills/
-    - global: ~/.claude/skills/
+    - default: .agents/skills/
+    - global: ~/.agents/skills/
   agents:
-    - default: .claude/agents/
-    - global: ~/.claude/agents/
+    - default: .agents/agents/
+    - global: ~/.agents/agents/
   prompts:
-    - default: .claude/prompts/
-    - global: ~/.claude/prompts/
+    - default: .agents/prompts/
+    - global: ~/.agents/prompts/
 
 library:
   skills:
     - name: firecrawl
       description: Scrape, crawl, and search websites using Firecrawl CLI
       source: /Users/me/projects/tools/skills/firecrawl/SKILL.md
+      groups: [web]
 
     - name: meta-skill
       description: Creates new Agent Skills following best practices
@@ -164,27 +165,33 @@ library:
       description: Generate diagrams via Kroki HTTP API supporting 28+ languages
       source: https://github.com/myorg/private-skills/blob/main/skills/diagram-kroki/SKILL.md
       requires: [skill:firecrawl]
+      groups: [basic]
 
     - name: green-screen-captions
       description: Generate and burn AI-powered captions onto green screen videos
       source: https://raw.githubusercontent.com/myorg/video-tools/main/skills/green-screen-captions/SKILL.md
       requires: [agent:video-processor, prompt:caption-style]
+      groups: [video]
 
   agents:
     - name: video-processor
       description: Processes video files with ffmpeg and whisper transcription
       source: /Users/me/projects/tools/agents/video-processor/AGENT.md
+      groups: [video]
 
     - name: code-reviewer
       description: Reviews code for quality, security, and performance
       source: https://github.com/myorg/agent-configs/blob/main/agents/code-reviewer/AGENT.md
+      groups: [coding]
 
   prompts:
     - name: caption-style
       description: Style guide for generating video captions
       source: /Users/me/projects/content/prompts/caption-style.md
+      groups: [video]
 
     - name: commit-message
       description: Standardized commit message format for all projects
       source: https://github.com/myorg/team-prompts/blob/main/prompts/commit-message.md
+      groups: [base, git]
 ```

@@ -30,20 +30,20 @@ Format the output as a table grouped by type:
 
 ```
 ## Skills
-| Name | Description | Source | Status |
-|------|-------------|--------|--------|
-| skill-name | skill-description | /local/path/... | installed (default) |
+| Name | Groups | Description | Source | Status |
+|------|--------|-------------|--------|--------|
+| skill-name | skill-groups | skill-description | /local/path/... | installed (default) |
 | other-skill | other-description | github.com/... | not installed |
 
 ## Agents
-| Name | Description | Source | Status |
-|------|-------------|--------|--------|
+| Name | Groups | Description | Source | Status |
+|------|--------|-------------|--------|--------|
 | agent-name | agent-description | /local/path/... | installed (global) |
 
 ## Prompts
-| Name | Description | Source | Status |
-|------|-------------|--------|--------|
-| prompt-name | prompt-description | github.com/... | not installed |
+| Name | Groups |Description | Source | Status |
+|------|--------|------------|--------|--------|
+| prompt-name | prompt-groups | prompt-description | github.com/... | not installed |
 ```
 
 If a section is empty, show: `No <type> in catalog.`
