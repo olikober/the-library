@@ -29,6 +29,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/apple-on-device-ai/SKILL.md
     - name: authentication
       description: Implement iOS authentication patterns including Sign in with Apple (ASAuthorizationAppleIDProvider, ASAuthorizationController, ASAuthorizationAppleIDCredential), credential state checking, identity token validation, ASWebAuthenticationSession for OAuth and third-party auth flows, ASAuthorizationPasswordProvider for AutoFill credential suggestions, and biometric authentication with LAContext. Use when implementing Sign in with Apple, handling Apple ID credentials, building OAuth login flows, integrating Password AutoFill, checking credential revocation state, or validating identity tokens server-side.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/authentication/SKILL.md
     - name: background-processing
       description: Schedule and execute background work on iOS using BGTaskScheduler. Use when registering BGAppRefreshTask for short background fetches, BGProcessingTask for long-running maintenance, BGContinuedProcessingTask (iOS 26+) for foreground-started work that continues in background, background URLSession downloads, or background push notifications. Covers Info.plist configuration, expiration handling, task completion, and debugging with simulated launches.
@@ -53,6 +54,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-nfc/SKILL.md
     - name: coreml
       description: Integrate and optimize Core ML models in iOS apps for on-device machine learning inference. Covers model loading (.mlmodelc, .mlpackage), predictions with auto-generated classes and MLFeatureProvider, compute unit configuration (CPU, GPU, Neural Engine), MLTensor, VNCoreMLRequest, MLComputePlan, multi-model pipelines, and deployment strategies. Use when loading Core ML models, making predictions, configuring compute units, or profiling model performance.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/coreml/SKILL.md
     - name: debugging-instruments
       description: Debug iOS apps and profile performance using LLDB, Memory Graph Debugger, and Instruments. Use when diagnosing crashes, memory leaks, retain cycles, main thread hangs, slow rendering, build failures, or when profiling CPU, memory, energy, and network usage.
@@ -62,12 +64,14 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/device-integrity/SKILL.md
     - name: energykit
       description: Query grid electricity forecasts and submit load events using EnergyKit to help users optimize home electricity usage. Use when building smart home apps, EV charger controls, HVAC scheduling, or energy management dashboards that guide users to use power during cleaner or cheaper grid periods.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/energykit/SKILL.md
     - name: eventkit-calendar
       description: Create, read, and manage calendar events and reminders using EventKit and EventKitUI. Use when adding events to the users calendar, creating reminders, setting recurrence rules, requesting calendar or reminders access, presenting event editors, choosing calendars, handling alarms, observing calendar changes, or working with EKEventStore, EKEvent, EKReminder, EKCalendar, EKRecurrenceRule, EKEventEditViewController, EKCalendarChooser, or EventKitUI views.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/eventkit-calendar/SKILL.md
     - name: healthkit
       description: Read, write, and query Apple Health data using HealthKit. Covers HKHealthStore authorization, sample queries, statistics queries, statistics collection queries for charts, saving HKQuantitySample data, background delivery, workout sessions with HKWorkoutSession and HKLiveWorkoutBuilder, HKUnit, and HKQuantityTypeIdentifier values. Use when integrating with Apple Health, displaying health metrics, recording workouts, or enabling background health data delivery.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/healthkit/SKILL.md
     - name: homekit-matter
       description: Control smart-home accessories and commission Matter devices using HomeKit and MatterSupport. Use when managing homes/rooms/accessories, creating action sets or triggers, reading accessory characteristics, onboarding Matter devices, or building a third-party smart-home ecosystem app.
@@ -107,6 +111,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/pencilkit-drawing/SKILL.md
     - name: permissionkit
       description: Create child communication safety experiences using PermissionKit to request parental permission for children. Use when building apps that involve child-to-contact communication, need to check communication limits, request parent/guardian approval, or handle permission responses for minors.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/permissionkit/SKILL.md
     - name: photos-camera-media
       description: Implement, review, or improve photo picking, camera capture, and media handling in iOS apps. Use when working with PhotosPicker, PHPickerViewController, camera capture sessions (AVCaptureSession), photo library access, image loading and display, video recording, or media permissions. Also use when selecting photos from the library, taking pictures, recording video, processing images, or handling photo/camera privacy permissions in Swift apps.
@@ -132,6 +137,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/speech-recognition/SKILL.md
     - name: storekit
       description: Implement, review, or improve in-app purchases and subscriptions using StoreKit 2. Use when building paywalls with SubscriptionStoreView or ProductView, processing transactions with Product and Transaction APIs, verifying entitlements, handling purchase flows (consumable, non-consumable, auto-renewable), implementing offer codes or promotional/win-back/introductory offers, managing subscription status and renewal state, setting up StoreKit testing with configuration files, or integrating Family Sharing, Ask to Buy, refund handling, and billing retry logic.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/storekit/SKILL.md
     - name: swift-charts
       description: Implement, review, or improve data visualizations using Swift Charts. Use when building bar, line, area, point, pie, or donut charts; when adding chart selection, scrolling, or annotations; when plotting functions with vectorized BarPlot, LinePlot, AreaPlot, or PointPlot; when customizing axes, scales, legends, or foregroundStyle grouping; or when creating specialized visualizations like heat maps, Gantt charts, stacked/grouped bars, sparklines, or threshold lines.
@@ -150,6 +156,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-testing/SKILL.md
     - name: swiftdata
       description: Implement, review, or improve data persistence using SwiftData. Use when defining @Model classes with @Attribute, @Relationship, @Transient, @Unique, or @Index; when querying with @Query, #Predicate, FetchDescriptor, or SortDescriptor; when configuring ModelContainer and ModelContext for SwiftUI or background work with @ModelActor; when planning schema migrations with VersionedSchema and SchemaMigrationPlan; when setting up CloudKit sync with ModelConfiguration; or when coexisting with or migrating from Core Data.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftdata/SKILL.md
     - name: swiftui-animation
       description: Implement, review, or improve SwiftUI animations and transitions. Use when adding explicit animations with withAnimation, configuring implicit animations with .animation(_:body:) or .animation(_:value:), configuring spring animations (.smooth, .snappy, .bouncy), building phase or keyframe animations with PhaseAnimator/KeyframeAnimator, creating hero transitions with matchedGeometryEffect or matchedTransitionSource, adding SF Symbol effects (bounce, pulse, variableColor, breathe, rotate, wiggle), implementing custom Transition or CustomAnimation types, or ensuring animations respect accessibilityReduceMotion.
@@ -180,6 +187,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-webkit/SKILL.md
     - name: tipkit
       description: Implement, review, or improve in-app tips and onboarding using Apples TipKit framework. Use when adding feature discovery tooltips, onboarding flows, contextual tips, first-run experiences, coach marks, or working with Tip protocol, TipView, popoverTip, tip rules, tip events, or feature education UI.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/tipkit/SKILL.md
     - name: writing-clearly-and-concisely
       description: Write clearly and concisely by removing redundant words, preferring active voice, using concrete language, and structuring sentences for clarity.
@@ -191,9 +199,11 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/vision-framework/SKILL.md
     - name: weatherkit
       description: Fetch current, hourly, and daily weather forecasts and display required attribution using WeatherKit. Use when integrating weather data, showing forecasts, handling weather alerts, displaying Apple Weather attribution, or querying historical weather statistics in iOS apps.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/weatherkit/SKILL.md
     - name: widgetkit
       description: Implement, review, or improve widgets, Live Activities, and controls using WidgetKit and ActivityKit. Use when building home screen, Lock Screen, or StandBy widgets with timeline providers; when creating interactive widgets with Button/Toggle and AppIntent actions; when adding Live Activities with Dynamic Island layouts (compact, minimal, expanded); when building Control Center widgets with ControlWidgetButton/ControlWidgetToggle; when configuring widget families, refresh budgets, deep links, push-based reloads, or Liquid Glass rendering; or when setting up widget extensions, App Groups, and entitlements.
+      groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/widgetkit/SKILL.md
   agents: []
   prompts: []
