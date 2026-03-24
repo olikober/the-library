@@ -119,6 +119,10 @@ library:
       description: Collect and analyze on-device performance metrics and crash diagnostics using MetricKit. Use when setting up MXMetricManager, handling MXMetricPayload or MXDiagnosticPayload, processing crash/hang/disk-write diagnostics via MXCallStackTree, adding custom signpost metrics, or uploading telemetry to an analytics backend.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/metrickit-diagnostics/SKILL.md
       groups: [ios]
+    - name: mulch
+      description: Use when the user wants to set up, configure, or use mulch for structured expertise management for AI agent workflows. Triggers include requests to "use mulch", "set up mulch", "install mulch", "configure mulch expertise", "record expertise with mulch", "query mulch", or any mulch-related task.
+      source: /Volumes/External/Users/olik/Dev/the-library/skills/mulch/SKILL.md
+      groups: [base, development]
     - name: musickit-audio
       description: Integrate Apple Music playback, catalog search, and Now Playing metadata using MusicKit and MediaPlayer. Use when adding music search, Apple Music subscription flows, queue management, playback controls, remote command handling, or Now Playing info to iOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/musickit-audio/SKILL.md
