@@ -123,6 +123,10 @@ library:
       description: Use when the user wants to set up, configure, or use mulch for structured expertise management for AI agent workflows. Triggers include requests to "use mulch", "set up mulch", "install mulch", "configure mulch expertise", "record expertise with mulch", "query mulch", or any mulch-related task.
       source: /Volumes/External/Users/olik/Dev/the-library/skills/mulch/SKILL.md
       groups: [base, development]
+    - name: seeds
+      description: Use when the user wants to set up, configure, or use seeds for git-native issue tracking for AI agent workflows. Triggers include requests to "use seeds", "set up seeds", "install seeds", "create seeds issue", "list seeds issues", or any seeds-related task.
+      source: /Volumes/External/Users/olik/Dev/the-library/skills/seeds/SKILL.md
+      groups: [base, development]
     - name: musickit-audio
       description: Integrate Apple Music playback, catalog search, and Now Playing metadata using MusicKit and MediaPlayer. Use when adding music search, Apple Music subscription flows, queue management, playback controls, remote command handling, or Now Playing info to iOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/musickit-audio/SKILL.md
