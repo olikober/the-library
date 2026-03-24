@@ -14,6 +14,7 @@ library:
     - name: alarmkit
       description: Implement AlarmKit alarms and countdown timers for iOS and iPadOS with Lock Screen, Dynamic Island, and Apple Watch system UI. Covers AlarmManager scheduling, AlarmAttributes and AlarmPresentation, AlarmButton stop and snooze actions, authorization, state observation, and Live Activity integration. Use when building wake-up alarms, countdown timers, or alarm-style alerts that need Apples system alarm experience.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/alarmkit/SKILL.md
+      groups: ios 
     - name: app-clips
       description: Build iOS App Clips with invocation URLs, NFC, QR codes, App Clip Codes, Safari banners, Maps, Messages, and shared App Group data handoff to the full app. Covers target setup, experience configuration, size limits, NSUserActivity handling, SKOverlay promotion, location confirmation, and capability limits. Use when creating App Clips or wiring App Clip invocation and full-app migration.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-clips/SKILL.md
@@ -119,6 +120,10 @@ library:
     - name: react-native-expo
       description: Build React Native apps with Expo SDK 52-54+. Covers New Architecture, React 19 changes, SDK breaking changes. Use when building Expo apps, migrating to New Architecture, or fixing build errors.
       source: /Users/olik/Dev/the-library/skills/react-native-expo/SKILL.md
+    - name: react-useeffect
+      description: React useEffect best practices from official docs. Use when writing/reviewing useEffect, useState for derived values, data fetching, or state synchronization. Teaches when NOT to use Effect and better alternatives.
+      source: /Users/olik/Dev/the-library/skills/react-useeffect/SKILL.md
+      groups: [react]
     - name: shareplay-activities
       description: Build shared real-time experiences using GroupActivities and SharePlay. Use when implementing shared media playback, collaborative app features, synchronized game state, or any FaceTime/iMessage-integrated group activity on iOS, macOS, tvOS, or visionOS.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/shareplay-activities/SKILL.md
