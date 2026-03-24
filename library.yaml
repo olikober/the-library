@@ -18,15 +18,19 @@ library:
     - name: app-clips
       description: Build iOS App Clips with invocation URLs, NFC, QR codes, App Clip Codes, Safari banners, Maps, Messages, and shared App Group data handoff to the full app. Covers target setup, experience configuration, size limits, NSUserActivity handling, SKOverlay promotion, location confirmation, and capability limits. Use when creating App Clips or wiring App Clip invocation and full-app migration.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-clips/SKILL.md
+      groups: [ios]
     - name: app-intents
       description: Implement App Intents for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence on iOS. Covers AppIntent actions, AppEntity and EntityQuery models, AppShortcutsProvider phrases, IndexedEntity Spotlight indexing, WidgetConfigurationIntent, SnippetIntent, and assistant schemas. Use when exposing app actions or entities to system surfaces.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-intents/SKILL.md
+      groups: [ios]
     - name: app-store-review
       description: Prepare for App Store review and prevent rejections. Covers App Store review guidelines, app rejection reasons, PrivacyInfo.xcprivacy privacy manifest requirements, required API reason codes, in-app purchase IAP and StoreKit rules, App Store Guidelines compliance, ATT App Tracking Transparency, EU DMA Digital Markets Act, HIG compliance checklist, app submission preparation, review preparation, metadata requirements, entitlements, widgets, and Live Activities review rules. Use when preparing for App Store submission, fixing rejection reasons, auditing privacy manifests, implementing ATT consent flow, configuring StoreKit IAP, or checking HIG compliance.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-store-review/SKILL.md
+      groups: [ios]
     - name: apple-on-device-ai
       description: Integrate on-device AI using Foundation Models framework, Core ML, and open-source LLM runtimes on Apple Silicon. Covers Foundation Models (LanguageModelSession, @Generable, @Guide, SystemLanguageModel, structured output, tool calling), Core ML (coremltools, model conversion, quantization, palettization, pruning, Neural Engine, MLTensor), MLX Swift (transformer inference, unified memory), and llama.cpp (GGUF, cross-platform LLM). Use when building tool-calling AI features, working with guided generation schemas, converting models, or running on-device inference.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/apple-on-device-ai/SKILL.md
+      groups: [ios]
     - name: authentication
       description: Implement iOS authentication patterns including Sign in with Apple (ASAuthorizationAppleIDProvider, ASAuthorizationController, ASAuthorizationAppleIDCredential), credential state checking, identity token validation, ASWebAuthenticationSession for OAuth and third-party auth flows, ASAuthorizationPasswordProvider for AutoFill credential suggestions, and biometric authentication with LAContext. Use when implementing Sign in with Apple, handling Apple ID credentials, building OAuth login flows, integrating Password AutoFill, checking credential revocation state, or validating identity tokens server-side.
       groups: [ios]
@@ -34,24 +38,31 @@ library:
     - name: background-processing
       description: Schedule and execute background work on iOS using BGTaskScheduler. Use when registering BGAppRefreshTask for short background fetches, BGProcessingTask for long-running maintenance, BGContinuedProcessingTask (iOS 26+) for foreground-started work that continues in background, background URLSession downloads, or background push notifications. Covers Info.plist configuration, expiration handling, task completion, and debugging with simulated launches.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/background-processing/SKILL.md
+      groups: [ios]
     - name: callkit-voip
       description: Implement VoIP calling with CallKit and PushKit. Use when building incoming/outgoing call flows, registering for VoIP push notifications, configuring CXProvider and CXCallController, handling call actions, coordinating audio sessions, or creating Call Directory extensions for caller ID and call blocking.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/callkit-voip/SKILL.md
+      groups: [ios]
     - name: cloudkit-sync
       description: Implement, review, or improve CloudKit and iCloud sync in iOS/macOS apps. Use when working with CKContainer, CKRecord, CKQuery, CKSubscription, CKSyncEngine, CKShare, NSUbiquitousKeyValueStore, or iCloud Drive file coordination; when syncing SwiftData models via ModelConfiguration with cloudKitDatabase; when handling CKError codes for conflict resolution, network failures, or quota limits; or when checking iCloud account status before performing sync operations.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/cloudkit-sync/SKILL.md
+      groups: [ios]
     - name: contacts-framework
       description: Read, create, update, and pick contacts using the Contacts and ContactsUI frameworks. Use when fetching contact data, saving new contacts, wrapping CNContactPickerViewController in SwiftUI, handling contact permissions, or working with CNContactStore fetch and save requests.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/contacts-framework/SKILL.md
+      groups: [ios]
     - name: core-bluetooth
       description: Scan, connect, and communicate with Bluetooth Low Energy peripherals and publish local peripheral services using Core Bluetooth. Use when implementing BLE central or peripheral roles, discovering services and characteristics, reading and writing characteristic values, subscribing to notifications, configuring background BLE modes, restoring state after app relaunch, or working with CBCentralManager, CBPeripheral, CBPeripheralManager, CBService, CBCharacteristic, CBUUID, or Bluetooth Low Energy workflows.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-bluetooth/SKILL.md
+      groups: [ios]
     - name: core-motion
       description: Access accelerometer, gyroscope, magnetometer, pedometer, and activity-recognition data using CoreMotion. Use when reading device sensor data, counting steps, detecting user activity (walking/running/driving), tracking altitude changes, or implementing motion-based interactions in iOS/watchOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-motion/SKILL.md
+      groups: [ios]
     - name: core-nfc
       description: Read and write NFC tags using CoreNFC. Use when scanning NDEF tags, reading ISO7816/ISO15693/FeliCa/MIFARE tags, writing NDEF messages, handling NFC session lifecycle, configuring NFC entitlements, or implementing background tag reading in iOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-nfc/SKILL.md
+      groups: [ios]
     - name: coreml
       description: Integrate and optimize Core ML models in iOS apps for on-device machine learning inference. Covers model loading (.mlmodelc, .mlpackage), predictions with auto-generated classes and MLFeatureProvider, compute unit configuration (CPU, GPU, Neural Engine), MLTensor, VNCoreMLRequest, MLComputePlan, multi-model pipelines, and deployment strategies. Use when loading Core ML models, making predictions, configuring compute units, or profiling model performance.
       groups: [ios]
@@ -59,9 +70,11 @@ library:
     - name: debugging-instruments
       description: Debug iOS apps and profile performance using LLDB, Memory Graph Debugger, and Instruments. Use when diagnosing crashes, memory leaks, retain cycles, main thread hangs, slow rendering, build failures, or when profiling CPU, memory, energy, and network usage.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/debugging-instruments/SKILL.md
+      groups: [ios]
     - name: device-integrity
       description: Verify device legitimacy and app integrity using DeviceCheck (DCDevice per-device bits) and App Attest (DCAppAttestService key generation, attestation, and assertion flows). Use when implementing fraud prevention, detecting compromised devices, validating app authenticity with Apples servers, protecting sensitive API endpoints with attested requests, or adding device verification to your backend architecture.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/device-integrity/SKILL.md
+      groups: [ios]
     - name: energykit
       description: Query grid electricity forecasts and submit load events using EnergyKit to help users optimize home electricity usage. Use when building smart home apps, EV charger controls, HVAC scheduling, or energy management dashboards that guide users to use power during cleaner or cheaper grid periods.
       groups: [ios]
@@ -69,6 +82,7 @@ library:
     - name: eventkit-calendar
       description: Create, read, and manage calendar events and reminders using EventKit and EventKitUI. Use when adding events to the users calendar, creating reminders, setting recurrence rules, requesting calendar or reminders access, presenting event editors, choosing calendars, handling alarms, observing calendar changes, or working with EKEventStore, EKEvent, EKReminder, EKCalendar, EKRecurrenceRule, EKEventEditViewController, EKCalendarChooser, or EventKitUI views.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/eventkit-calendar/SKILL.md
+      groups: [ios]
     - name: healthkit
       description: Read, write, and query Apple Health data using HealthKit. Covers HKHealthStore authorization, sample queries, statistics queries, statistics collection queries for charts, saving HKQuantitySample data, background delivery, workout sessions with HKWorkoutSession and HKLiveWorkoutBuilder, HKUnit, and HKQuantityTypeIdentifier values. Use when integrating with Apple Health, displaying health metrics, recording workouts, or enabling background health data delivery.
       groups: [ios]
@@ -76,39 +90,51 @@ library:
     - name: homekit-matter
       description: Control smart-home accessories and commission Matter devices using HomeKit and MatterSupport. Use when managing homes/rooms/accessories, creating action sets or triggers, reading accessory characteristics, onboarding Matter devices, or building a third-party smart-home ecosystem app.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/homekit-matter/SKILL.md
+      groups: [ios]
     - name: ios-accessibility
       description: Implement, review, or improve accessibility in iOS/macOS apps with SwiftUI and UIKit. Use when adding VoiceOver support with accessibility labels, hints, values, and traits; when grouping or reordering accessibility elements; when managing focus with @AccessibilityFocusState; when supporting Dynamic Type with @ScaledMetric; when building custom rotors or accessibility actions; when auditing a11y compliance; or when adapting UI for assistive technologies and system accessibility preferences.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/ios-accessibility/SKILL.md
+      groups: [ios]
     - name: ios-localization
       description: Implement, review, or improve localization and internationalization in iOS/macOS apps — String Catalogs (.xcstrings), LocalizedStringKey, LocalizedStringResource, pluralization, FormatStyle for numbers/dates/measurements, right-to-left layout, Dynamic Type, and locale-aware formatting. Use when adding multi-language support, setting up String Catalogs, handling plural forms, formatting dates/numbers/currencies for different locales, testing localizations, or making UI work correctly in RTL languages like Arabic and Hebrew.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/ios-localization/SKILL.md
+      groups: [ios]
     - name: ios-networking
       description: Build, review, or improve networking code in iOS/macOS apps using URLSession with async/await, structured concurrency, and modern Swift patterns. Use when working with REST APIs, downloading files, uploading data, WebSocket connections, pagination, retry logic, request middleware, caching, background transfers, or network reachability monitoring. Also use when handling HTTP requests, API clients, network error handling, or data fetching in Swift apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/ios-networking/SKILL.md
+      groups: [ios]
     - name: ios-security
       description: Secure iOS apps with Keychain Services, CryptoKit encryption, biometric authentication (Face ID, Touch ID), Secure Enclave key storage, LAContext, App Transport Security (ATS), certificate pinning, data protection classes, and secure coding patterns. Use when implementing app security features, auditing privacy manifests, configuring App Transport Security, securing keychain access, adding biometric authentication, or encrypting sensitive data with CryptoKit.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/ios-security/SKILL.md
+      groups: [ios]
     - name: live-activities
       description: Implement, review, or improve Live Activities and Dynamic Island experiences in iOS apps using ActivityKit. Use when building real-time updating widgets for the Lock Screen and Dynamic Island — delivery tracking, sports scores, ride-sharing status, workout timers, media playback, or any time-sensitive information that updates in real time. Also use when working with ActivityKit, ActivityAttributes, Activity lifecycle (request/update/end), Dynamic Island layouts (compact/minimal/expanded), push-to-update Live Activities, or Lock Screen live widgets.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/live-activities/SKILL.md
+      groups: [ios]
     - name: mapkit-location
       description: Implement, review, or improve maps and location features in iOS/macOS apps using MapKit and CoreLocation. Use when working with Map views, annotations, markers, polylines, user location tracking, geocoding, reverse geocoding, search/autocomplete, directions and routes, geofencing, region monitoring, CLLocationUpdate async streams, or location authorization flows. Also use when working with maps, coordinates, addresses, places, directions, distance calculations, or location-based features in Swift apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/mapkit-location/SKILL.md
+      groups: [ios]
     - name: metrickit-diagnostics
       description: Collect and analyze on-device performance metrics and crash diagnostics using MetricKit. Use when setting up MXMetricManager, handling MXMetricPayload or MXDiagnosticPayload, processing crash/hang/disk-write diagnostics via MXCallStackTree, adding custom signpost metrics, or uploading telemetry to an analytics backend.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/metrickit-diagnostics/SKILL.md
+      groups: [ios]
     - name: musickit-audio
       description: Integrate Apple Music playback, catalog search, and Now Playing metadata using MusicKit and MediaPlayer. Use when adding music search, Apple Music subscription flows, queue management, playback controls, remote command handling, or Now Playing info to iOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/musickit-audio/SKILL.md
+      groups: [ios]
     - name: natural-language
       description: Tokenize, tag, and analyze natural language text using Apples NaturalLanguage framework and translate between languages with the Translation framework. Use when adding language identification, sentiment analysis, named entity recognition, part-of-speech tagging, text embeddings, or in-app translation to iOS/macOS/visionOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/natural-language/SKILL.md
+      groups: [ios]
     - name: passkit-wallet
       description: Integrate Apple Pay payments and Wallet passes using PassKit. Use when adding Apple Pay buttons, creating payment requests, handling payment authorization, adding passes to Wallet, configuring merchant capabilities, managing shipping and contact fields, or working with PKPaymentRequest, PKPaymentAuthorizationController, PKPaymentButton, PKPass, PKAddPassesViewController, PKPassLibrary, or Apple Pay checkout flows.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/passkit-wallet/SKILL.md
+      groups: [ios]
     - name: pencilkit-drawing
       description: Add Apple Pencil drawing, canvas views, tool pickers, and ink serialization using PencilKit. Use when building drawing apps, annotation features, handwriting capture, signature fields, or any Apple Pencil-powered experience on iOS/iPadOS/visionOS.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/pencilkit-drawing/SKILL.md
+      groups: [ios]
     - name: permissionkit
       description: Create child communication safety experiences using PermissionKit to request parental permission for children. Use when building apps that involve child-to-contact communication, need to check communication limits, request parent/guardian approval, or handle permission responses for minors.
       groups: [ios]
@@ -116,12 +142,15 @@ library:
     - name: photos-camera-media
       description: Implement, review, or improve photo picking, camera capture, and media handling in iOS apps. Use when working with PhotosPicker, PHPickerViewController, camera capture sessions (AVCaptureSession), photo library access, image loading and display, video recording, or media permissions. Also use when selecting photos from the library, taking pictures, recording video, processing images, or handling photo/camera privacy permissions in Swift apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/photos-camera-media/SKILL.md
+      groups: [ios]
     - name: push-notifications
       description: Implement, review, or debug push notifications in iOS/macOS apps — local notifications, remote (APNs) notifications, rich notifications, notification actions, silent pushes, and notification service/content extensions. Use when working with UNUserNotificationCenter, registering for remote notifications, handling notification payloads, setting up notification categories and actions, creating rich notification content, or debugging notification delivery. Also use when working with alerts, badges, sounds, background pushes, or user notification permissions in Swift apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/push-notifications/SKILL.md
+      groups: [ios]
     - name: realitykit-ar
       description: Build augmented reality experiences with RealityKit and ARKit on iOS. Use when adding 3D content with RealityView, loading entities and models, placing objects via raycasting, configuring AR camera sessions, handling world tracking, scene understanding, or implementing entity interactions and gestures.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/realitykit-ar/SKILL.md
+      groups: [ios]
     - name: react-native-expo
       description: Build React Native apps with Expo SDK 52-54+. Covers New Architecture, React 19 changes, SDK breaking changes. Use when building Expo apps, migrating to New Architecture, or fixing build errors.
       source: ~/Dev/the-library/skills/react-native-expo/SKILL.md
@@ -132,9 +161,11 @@ library:
     - name: shareplay-activities
       description: Build shared real-time experiences using GroupActivities and SharePlay. Use when implementing shared media playback, collaborative app features, synchronized game state, or any FaceTime/iMessage-integrated group activity on iOS, macOS, tvOS, or visionOS.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/shareplay-activities/SKILL.md
+      groups: [ios]
     - name: speech-recognition
       description: Transcribe speech to text using the Speech framework. Use when implementing live microphone transcription with AVAudioEngine, recognizing pre-recorded audio files, configuring on-device vs server-based recognition, handling authorization flows, or adopting the new SpeechAnalyzer API (iOS 26+) for modern async/await speech-to-text.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/speech-recognition/SKILL.md
+      groups: [ios]
     - name: storekit
       description: Implement, review, or improve in-app purchases and subscriptions using StoreKit 2. Use when building paywalls with SubscriptionStoreView or ProductView, processing transactions with Product and Transaction APIs, verifying entitlements, handling purchase flows (consumable, non-consumable, auto-renewable), implementing offer codes or promotional/win-back/introductory offers, managing subscription status and renewal state, setting up StoreKit testing with configuration files, or integrating Family Sharing, Ask to Buy, refund handling, and billing retry logic.
       groups: [ios]
@@ -142,18 +173,23 @@ library:
     - name: swift-charts
       description: Implement, review, or improve data visualizations using Swift Charts. Use when building bar, line, area, point, pie, or donut charts; when adding chart selection, scrolling, or annotations; when plotting functions with vectorized BarPlot, LinePlot, AreaPlot, or PointPlot; when customizing axes, scales, legends, or foregroundStyle grouping; or when creating specialized visualizations like heat maps, Gantt charts, stacked/grouped bars, sparklines, or threshold lines.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-charts/SKILL.md
+      groups: [ios]
     - name: swift-codable
       description: Implement Swift Codable models for JSON and property-list encoding and decoding with JSONDecoder, JSONEncoder, CodingKeys, and custom init(from:) or encode(to:). Use when parsing API responses, remapping keys, flattening nested JSON, handling date or data decoding strategies, decoding heterogeneous arrays, or integrating Codable with URLSession, SwiftData, or UserDefaults.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-codable/SKILL.md
+      groups: [ios]
     - name: swift-concurrency
       description: Resolve Swift concurrency compiler errors, adopt Swift 6.2 approachable concurrency (SE-0466), and write data-race-safe async code. Use when fixing Sendable conformance errors, actor isolation warnings, or strict concurrency diagnostics; when adopting default MainActor isolation, @concurrent, nonisolated(nonsending), or Task.immediate; when designing actor-based architectures, structured concurrency with TaskGroup, or background work offloading; or when migrating from @preconcurrency to full Swift 6 strict concurrency.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-concurrency/SKILL.md
+      groups: [ios]
     - name: swift-language
       description: Apply modern Swift language patterns and idioms for non-concurrency, non-SwiftUI code. Covers if/switch expressions (Swift 5.9+), typed throws (Swift 6+), result builders, property wrappers, opaque and existential types (some vs any), guard patterns, Never type, Regex builders (Swift 5.7+), Codable best practices (CodingKeys, custom decoding, nested containers), modern collection APIs (count(where:), contains(where:), replacing()), FormatStyle (.formatted() on dates, numbers, measurements), and string interpolation patterns. Use when writing core Swift code involving generics, protocols, enums, closures, or modern language features.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-language/SKILL.md
+      groups: [ios]
     - name: swift-testing
       description: Write and migrate tests using the Swift Testing framework with @Test, @Suite, #expect, #require, confirmation, parameterized tests, test tags, traits, withKnownIssue, XCTest UI testing, XCUITest, test plan, mocking, test doubles, testable architecture, snapshot testing, async test patterns, test organization, and test-driven development in Swift. Use when writing or migrating tests with Swift Testing framework, implementing parameterized tests, working with test traits, converting XCTest to Swift Testing, or setting up test organization and mocking patterns.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-testing/SKILL.md
+      groups: [ios]
     - name: swiftdata
       description: Implement, review, or improve data persistence using SwiftData. Use when defining @Model classes with @Attribute, @Relationship, @Transient, @Unique, or @Index; when querying with @Query, #Predicate, FetchDescriptor, or SortDescriptor; when configuring ModelContainer and ModelContext for SwiftUI or background work with @ModelActor; when planning schema migrations with VersionedSchema and SchemaMigrationPlan; when setting up CloudKit sync with ModelConfiguration; or when coexisting with or migrating from Core Data.
       groups: [ios]
@@ -161,30 +197,39 @@ library:
     - name: swiftui-animation
       description: Implement, review, or improve SwiftUI animations and transitions. Use when adding explicit animations with withAnimation, configuring implicit animations with .animation(_:body:) or .animation(_:value:), configuring spring animations (.smooth, .snappy, .bouncy), building phase or keyframe animations with PhaseAnimator/KeyframeAnimator, creating hero transitions with matchedGeometryEffect or matchedTransitionSource, adding SF Symbol effects (bounce, pulse, variableColor, breathe, rotate, wiggle), implementing custom Transition or CustomAnimation types, or ensuring animations respect accessibilityReduceMotion.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-animation/SKILL.md
+      groups: [ios]
     - name: swiftui-gestures
       description: Implement, review, or improve SwiftUI gesture handling. Use when adding tap, long press, drag, magnify, or rotate gestures, composing gestures with simultaneously/sequenced/exclusively, managing transient state with @GestureState, resolving parent/child gesture conflicts with highPriorityGesture or simultaneousGesture, building custom Gesture protocol conformances, or migrating from deprecated MagnificationGesture/RotationGesture to MagnifyGesture/RotateGesture.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-gestures/SKILL.md
+      groups: [ios]
     - name: swiftui-layout-components
       description: Build SwiftUI layouts using stacks, grids, lists, scroll views, forms, and controls. Covers VStack/HStack/ZStack, LazyVGrid/LazyHGrid, List with sections and swipe actions, ScrollView with ScrollViewReader, Form with validation, Toggle/Picker/Slider, .searchable, and overlay patterns. Use when building data-driven layouts, collection views, settings screens, search interfaces, or transient overlay UI.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-layout-components/SKILL.md
+      groups: [ios]
     - name: swiftui-liquid-glass
       description: Implement, review, or improve SwiftUI Liquid Glass effects for iOS 26+. Covers glassEffect modifier, GlassEffectContainer, glass button styles, glass toolbar, glass tab bar, morphing transitions, translucent material, vibrancy, tinting, interactive glass, ToolbarSpacer, scrollEdgeEffectStyle, backgroundExtensionEffect, and availability gating. Use when asked about Liquid Glass, glass buttons, glassEffect, GlassEffectContainer, GlassEffectTransition, glassEffectID, glassEffectUnion, scroll edge effects, or adopting iOS 26 design.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-liquid-glass/SKILL.md
+      groups: [ios]
     - name: swiftui-navigation
       description: Implement SwiftUI navigation patterns including NavigationStack, NavigationSplitView, sheet presentation, tab-based navigation, and deep linking. Use when building push navigation, programmatic routing, multi-column layouts, modal sheets, tab bars, universal links, or custom URL scheme handling.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-navigation/SKILL.md
+      groups: [ios]
     - name: swiftui-patterns
       description: Build SwiftUI views with modern MV architecture, state management, and view composition patterns. Covers @Observable ownership rules, @State/@Bindable/@Environment wiring, view decomposition, custom ViewModifiers, environment values, async data loading with .task, iOS 26+ APIs, Writing Tools, and performance guidelines. Use when structuring a SwiftUI app, managing state with @Observable, composing view hierarchies, or applying SwiftUI best practices.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-patterns/SKILL.md
+      groups: [ios]
     - name: swiftui-performance
       description: Audit and improve SwiftUI runtime performance. Use when diagnosing slow rendering, janky scrolling, high CPU, memory usage, excessive view updates, layout thrash, body evaluation cost, identity churn, view lifetime issues, lazy loading, Instruments profiling guidance, and performance audit requests.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-performance/SKILL.md
+      groups: [ios]
     - name: swiftui-uikit-interop
       description: Bridges UIKit and SwiftUI by wrapping UIKit views and view controllers in SwiftUI with UIViewRepresentable and UIViewControllerRepresentable, embedding SwiftUI in UIKit with UIHostingController, and coordinating delegate callbacks. Use when integrating camera previews, map views, mail compose, document scanners, PDF renderers, text views with attributed text, or other UIKit-only or third-party UIKit SDK surfaces into a SwiftUI app, or when migrating a UIKit app to SwiftUI incrementally.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-uikit-interop/SKILL.md
+      groups: [ios]
     - name: swiftui-webkit
       description: Embeds and controls web content in SwiftUI with WebKit for SwiftUI, including WebView, WebPage, navigation policies, JavaScript execution, observable page state, link interception, local HTML or data loading, and custom URL schemes. Use when building iOS 26+ article/detail views, help centers, in-app documentation, or other embedded web experiences backed by HTML, CSS, and JavaScript.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-webkit/SKILL.md
+      groups: [ios]
     - name: tipkit
       description: Implement, review, or improve in-app tips and onboarding using Apples TipKit framework. Use when adding feature discovery tooltips, onboarding flows, contextual tips, first-run experiences, coach marks, or working with Tip protocol, TipView, popoverTip, tip rules, tip events, or feature education UI.
       groups: [ios]
@@ -197,6 +242,7 @@ library:
     - name: vision-framework
       description: Implement computer vision features including text recognition (OCR), face detection, barcode scanning, image segmentation, object tracking, and document scanning in iOS apps. Covers both the modern Swift-native Vision API (iOS 16+) and legacy VNRequest patterns, VisionKit DataScannerViewController for live camera scanning, and VNCoreMLRequest for custom model inference. Use when adding OCR, barcode scanning, face detection, or custom Core ML model inference with Vision.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/vision-framework/SKILL.md
+      groups: [ios]
     - name: weatherkit
       description: Fetch current, hourly, and daily weather forecasts and display required attribution using WeatherKit. Use when integrating weather data, showing forecasts, handling weather alerts, displaying Apple Weather attribution, or querying historical weather statistics in iOS apps.
       groups: [ios]
