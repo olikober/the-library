@@ -15,9 +15,9 @@ library:
       description: Implement AlarmKit alarms and countdown timers for iOS and iPadOS with Lock Screen, Dynamic Island, and Apple Watch system UI. Covers AlarmManager scheduling, AlarmAttributes and AlarmPresentation, AlarmButton stop and snooze actions, authorization, state observation, and Live Activity integration. Use when building wake-up alarms, countdown timers, or alarm-style alerts that need Apples system alarm experience.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/alarmkit/SKILL.md
       groups: ios
-    - name: gstack:browse
+    - name: gstack-browse
       description: Fast headless browser for QA testing and site dogfooding. Navigate any URL, interact with elements, verify page state, diff before/after actions, take annotated screenshots, check responsive layouts, test forms and uploads, handle dialogs, and assert element states. ~100ms per command. Use when asked to open in browser, test the site, take a screenshot, or dogfood this.
-      source: ./skills/gstack:browse/SKILL.md
+      source: ./skills/gstack-browse/SKILL.md
       groups: [gstack] 
     - name: app-clips
       description: Build iOS App Clips with invocation URLs, NFC, QR codes, App Clip Codes, Safari banners, Maps, Messages, and shared App Group data handoff to the full app. Covers target setup, experience configuration, size limits, NSUserActivity handling, SKOverlay promotion, location confirmation, and capability limits. Use when creating App Clips or wiring App Clip invocation and full-app migration.
@@ -27,17 +27,17 @@ library:
       description: Implement App Intents for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence on iOS. Covers AppIntent actions, AppEntity and EntityQuery models, AppShortcutsProvider phrases, IndexedEntity Spotlight indexing, WidgetConfigurationIntent, SnippetIntent, and assistant schemas. Use when exposing app actions or entities to system surfaces.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-intents/SKILL.md
       groups: [ios]
-    - name: gstack:design-consultation
+    - name: gstack-design-consultation
       description: Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your projects design source of truth. Use when asked to design system, brand guidelines, or create DESIGN.md.
-      source: ./skills/gstack:design-consultation/SKILL.md
+      source: ./skills/gstack-design-consultation/SKILL.md
       groups: [gstack]
-    - name: gstack:design-review
+    - name: gstack-design-review
       description: Designers eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. Use when asked to audit the design, visual QA, check if it looks good, or design polish.
-      source: ./skills/gstack:design-review/SKILL.md
+      source: ./skills/gstack-design-review/SKILL.md
       groups: [gstack]
-    - name: gstack:document-release
+    - name: gstack-document-release
       description: Post-ship documentation update. Reads all project docs, cross-references the diff, updates README/ARCHITECTURE/CONTRIBUTING/CLAUDE.md to match what shipped, polishes CHANGELOG voice, cleans up TODOS, and optionally bumps VERSION. Use when asked to update the docs, sync documentation, or post-ship docs.
-      source: ./skills/gstack:document-release/SKILL.md
+      source: ./skills/gstack-document-release/SKILL.md
       groups: [gstack]
     - name: app-store-review
       description: Prepare for App Store review and prevent rejections. Covers App Store review guidelines, app rejection reasons, PrivacyInfo.xcprivacy privacy manifest requirements, required API reason codes, in-app purchase IAP and StoreKit rules, App Store Guidelines compliance, ATT App Tracking Transparency, EU DMA Digital Markets Act, HIG compliance checklist, app submission preparation, review preparation, metadata requirements, entitlements, widgets, and Live Activities review rules. Use when preparing for App Store submission, fixing rejection reasons, auditing privacy manifests, implementing ATT consent flow, configuring StoreKit IAP, or checking HIG compliance.
@@ -47,13 +47,13 @@ library:
       description: Integrate on-device AI using Foundation Models framework, Core ML, and open-source LLM runtimes on Apple Silicon. Covers Foundation Models (LanguageModelSession, @Generable, @Guide, SystemLanguageModel, structured output, tool calling), Core ML (coremltools, model conversion, quantization, palettization, pruning, Neural Engine, MLTensor), MLX Swift (transformer inference, unified memory), and llama.cpp (GGUF, cross-platform LLM). Use when building tool-calling AI features, working with guided generation schemas, converting models, or running on-device inference.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/apple-on-device-ai/SKILL.md
       groups: [ios]
-    - name: gstack
+    - name: gstack-browser
       description: Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with elements, verify state, diff before/after, take annotated screenshots, test responsive layouts, forms, uploads, dialogs, and capture bug evidence. Use when asked to open or test a site, verify a deployment, dogfood a user flow, or file a bug with screenshots.
-      source: ./skills/gstack:SKILL.md
+      source: ./skills/gstack-SKILL.md
       groups: [gstack]
-    - name: gstack:investigate
+    - name: gstack-investigate
       description: Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to debug this, fix this bug, why is this broken, investigate this error, or root cause analysis.
-      source: ./skills/gstack:investigate/SKILL.md
+      source: ./skills/gstack-investigate/SKILL.md
       groups: [gstack]
     - name: authentication
       description: Implement iOS authentication patterns including Sign in with Apple (ASAuthorizationAppleIDProvider, ASAuthorizationController, ASAuthorizationAppleIDCredential), credential state checking, identity token validation, ASWebAuthenticationSession for OAuth and third-party auth flows, ASAuthorizationPasswordProvider for AutoFill credential suggestions, and biometric authentication with LAContext. Use when implementing Sign in with Apple, handling Apple ID credentials, building OAuth login flows, integrating Password AutoFill, checking credential revocation state, or validating identity tokens server-side.
@@ -67,37 +67,37 @@ library:
       description: Create software diagrams using Mermaid syntax. Use for class diagrams, sequence diagrams, flowcharts, ERDs, C4 diagrams, state diagrams, and more. Triggers on diagram, visualize, model, show the flow, system architecture, database design.
       source: ./skills/mermaid-diagrams/SKILL.md
       groups: [diagrams, documentation]
-    - name: gstack:office-hours
+    - name: gstack-office-hours
       description: YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to brainstorm this, I have an idea, help me think through this, office hours, or is this worth building.
-      source: ./skills/gstack:office-hours/SKILL.md
+      source: ./skills/gstack-office-hours/SKILL.md
       groups: [gstack]
     - name: callkit-voip
       description: Implement VoIP calling with CallKit and PushKit. Use when building incoming/outgoing call flows, registering for VoIP push notifications, configuring CXProvider and CXCallController, handling call actions, coordinating audio sessions, or creating Call Directory extensions for caller ID and call blocking.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/callkit-voip/SKILL.md
       groups: [ios]
-    - name: gstack:plan-ceo-review
+    - name: gstack-plan-ceo-review
       description: CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, SCOPE REDUCTION. Use when asked to think bigger, expand scope, strategy review, rethink this, or is this ambitious enough.
-      source: ./skills/gstack:plan-ceo-review/SKILL.md
+      source: ./skills/gstack-plan-ceo-review/SKILL.md
       groups: [gstack]
-    - name: gstack:plan-design-review
+    - name: gstack-plan-design-review
       description: Designers eye plan review — interactive, like CEO and Eng review. Rates each design dimension 0-10, explains what would make it a 10, then fixes the plan to get there. Works in plan mode. For live site visual audits, use /design-review. Use when asked to review the design plan or design critique.
-      source: ./skills/gstack:plan-design-review/SKILL.md
+      source: ./skills/gstack-plan-design-review/SKILL.md
       groups: [gstack]
-    - name: gstack:plan-eng-review
+    - name: gstack-plan-eng-review
       description: Eng manager-mode plan review. Lock in the execution plan — architecture, data flow, diagrams, edge cases, test coverage, performance. Walks through issues interactively with opinionated recommendations. Use when asked to review the architecture, engineering review, or lock in the plan.
-      source: ./skills/gstack:plan-eng-review/SKILL.md
+      source: ./skills/gstack-plan-eng-review/SKILL.md
       groups: [gstack]
     - name: cloudkit-sync
       description: Implement, review, or improve CloudKit and iCloud sync in iOS/macOS apps. Use when working with CKContainer, CKRecord, CKQuery, CKSubscription, CKSyncEngine, CKShare, NSUbiquitousKeyValueStore, or iCloud Drive file coordination; when syncing SwiftData models via ModelConfiguration with cloudKitDatabase; when handling CKError codes for conflict resolution, network failures, or quota limits; or when checking iCloud account status before performing sync operations.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/cloudkit-sync/SKILL.md
       groups: [ios]
-    - name: gstack:qa
+    - name: gstack-qa
       description: Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to qa, QA, test this site, find bugs, test and fix, or fix whats broken. Three tiers: Quick, Standard, Exhaustive. For report-only mode, use /qa-only.
-      source: ./skills/gstack:qa/SKILL.md
+      source: ./skills/gstack-qa/SKILL.md
       groups: [gstack]
-    - name: gstack:qa-only
+    - name: gstack-qa-only
       description: Report-only QA testing. Systematically tests a web application and produces a structured report with health score, screenshots, and repro steps — but never fixes anything. Use when asked to just report bugs, qa report only, or test but dont fix. For the full test-fix-verify loop, use /qa instead.
-      source: ./skills/gstack:qa-only/SKILL.md
+      source: ./skills/gstack-qa-only/SKILL.md
       groups: [gstack]
     - name: contacts-framework
       description: Read, create, update, and pick contacts using the Contacts and ContactsUI frameworks. Use when fetching contact data, saving new contacts, wrapping CNContactPickerViewController in SwiftUI, handling contact permissions, or working with CNContactStore fetch and save requests.
