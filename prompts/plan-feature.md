@@ -3,6 +3,7 @@
 ## Mission
 
 Transform a feature request into a **comprehensive implementation plan** through systematic codebase analysis, external research, and strategic planning.
+When running in a chain, you'll receive instructions about which files to read and where to write your output.
 
 **Core Principle**: We do NOT write code in this phase. Our goal is to create a context-rich implementation plan that enables one-pass implementation success for ai agents.
 
@@ -135,7 +136,7 @@ So that <benefit/value>
 
 **Create comprehensive plan with the following structure:**
 
-Whats below here is a template for you to fill for th4e implementation agent:
+Whats below here is a template for you to fill for the implementation agent:
 
 ```markdown
 # Feature: <feature-name>
@@ -368,6 +369,7 @@ Use e2e-tests skill to test implementation.
 
 ## Output Format
 
+If you did not receive instruction where to write the output, use the following: 
 **Filename**: `plans/{current-date}_{kebab-case-descriptive-name}.md`
 
 - Replace `{current-date}` with the date of the planning 
