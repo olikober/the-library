@@ -14,55 +14,179 @@ library:
     - name: alarmkit
       description: Implement AlarmKit alarms and countdown timers for iOS and iPadOS with Lock Screen, Dynamic Island, and Apple Watch system UI. Covers AlarmManager scheduling, AlarmAttributes and AlarmPresentation, AlarmButton stop and snooze actions, authorization, state observation, and Live Activity integration. Use when building wake-up alarms, countdown timers, or alarm-style alerts that need Apples system alarm experience.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/alarmkit/SKILL.md
-      groups: ios 
+      groups: ios
+    - name: autoplan
+      description: Auto-review pipeline — reads the full CEO, design, and eng review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. Surfaces taste decisions at a final approval gate. Use when asked to auto review, run all reviews, review this plan automatically, or make the decisions for me.
+      source: ./skills/gstack/autoplan/SKILL.md
+      groups: [gstack]
+    - name: benchmark
+      description: Performance regression detection using the browse daemon. Establishes baselines for page load times, Core Web Vitals, and resource sizes. Compares before/after on every PR. Tracks performance trends over time. Use when: performance, benchmark, page speed, lighthouse, web vitals, bundle size, load time.
+      source: ./skills/gstack/benchmark/SKILL.md
+      groups: [gstack]
+    - name: browse
+      description: Fast headless browser for QA testing and site dogfooding. Navigate any URL, interact with elements, verify page state, diff before/after actions, take annotated screenshots, check responsive layouts, test forms and uploads, handle dialogs, and assert element states. ~100ms per command. Use when asked to open in browser, test the site, take a screenshot, or dogfood this.
+      source: ./skills/gstack/browse/SKILL.md
+      groups: [gstack] 
     - name: app-clips
       description: Build iOS App Clips with invocation URLs, NFC, QR codes, App Clip Codes, Safari banners, Maps, Messages, and shared App Group data handoff to the full app. Covers target setup, experience configuration, size limits, NSUserActivity handling, SKOverlay promotion, location confirmation, and capability limits. Use when creating App Clips or wiring App Clip invocation and full-app migration.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-clips/SKILL.md
       groups: [ios]
+    - name: canary
+      description: Post-deploy canary monitoring. Watches the live app for console errors, performance regressions, and page failures using the browse daemon. Takes periodic screenshots, compares against pre-deploy baselines, and alerts on anomalies. Use when: monitor deploy, canary, post-deploy check, watch production, verify deploy.
+      source: ./skills/gstack/canary/SKILL.md
+      groups: [gstack]
+    - name: codex
+      description: OpenAI Codex CLI wrapper — three modes. Code review: independent diff review via codex review with pass/fail gate. Challenge: adversarial mode that tries to break your code. Consult: ask codex anything with session continuity. The 200 IQ autistic developer second opinion. Use when asked to codex review, codex challenge, ask codex, second opinion, or consult codex.
+      source: ./skills/gstack/codex/SKILL.md
+      groups: [gstack]
+    - name: careful
+      description: Safety guardrails for destructive commands. Warns before rm -rf, DROP TABLE, force-push, git reset --hard, kubectl delete, and similar destructive operations. User can override each warning. Use when touching prod, debugging live systems, or working in a shared environment. Use when asked to be careful, safety mode, prod mode, or careful mode.
+      source: ./skills/gstack/careful/SKILL.md
+      groups: [gstack]
     - name: app-intents
       description: Implement App Intents for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence on iOS. Covers AppIntent actions, AppEntity and EntityQuery models, AppShortcutsProvider phrases, IndexedEntity Spotlight indexing, WidgetConfigurationIntent, SnippetIntent, and assistant schemas. Use when exposing app actions or entities to system surfaces.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-intents/SKILL.md
       groups: [ios]
+    - name: design-consultation
+      description: Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your projects design source of truth. Use when asked to design system, brand guidelines, or create DESIGN.md.
+      source: ./skills/gstack/design-consultation/SKILL.md
+      groups: [gstack]
+    - name: design-review
+      description: Designers eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. Use when asked to audit the design, visual QA, check if it looks good, or design polish.
+      source: ./skills/gstack/design-review/SKILL.md
+      groups: [gstack]
+    - name: document-release
+      description: Post-ship documentation update. Reads all project docs, cross-references the diff, updates README/ARCHITECTURE/CONTRIBUTING/CLAUDE.md to match what shipped, polishes CHANGELOG voice, cleans up TODOS, and optionally bumps VERSION. Use when asked to update the docs, sync documentation, or post-ship docs.
+      source: ./skills/gstack/document-release/SKILL.md
+      groups: [gstack]
     - name: app-store-review
       description: Prepare for App Store review and prevent rejections. Covers App Store review guidelines, app rejection reasons, PrivacyInfo.xcprivacy privacy manifest requirements, required API reason codes, in-app purchase IAP and StoreKit rules, App Store Guidelines compliance, ATT App Tracking Transparency, EU DMA Digital Markets Act, HIG compliance checklist, app submission preparation, review preparation, metadata requirements, entitlements, widgets, and Live Activities review rules. Use when preparing for App Store submission, fixing rejection reasons, auditing privacy manifests, implementing ATT consent flow, configuring StoreKit IAP, or checking HIG compliance.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-store-review/SKILL.md
       groups: [ios]
+    - name: freeze
+      description: Restrict file edits to a specific directory for the session. Blocks Edit and Write outside the allowed path. Use when debugging to prevent accidentally fixing unrelated code, or when you want to scope changes to one module. Use when asked to freeze, restrict edits, only edit this folder, or lock down edits.
+      source: ./skills/gstack/freeze/SKILL.md
+      groups: [gstack]
+    - name: guard
+      description: Full safety mode: destructive command warnings + directory-scoped edits. Combines /careful (warns before rm -rf, DROP TABLE, force-push, etc.) with /freeze (blocks edits outside a specified directory). Use for maximum safety when touching prod or debugging live systems. Use when asked to guard mode, full safety, lock it down, or maximum safety.
+      source: ./skills/gstack/guard/SKILL.md
+      groups: [gstack]
     - name: apple-on-device-ai
       description: Integrate on-device AI using Foundation Models framework, Core ML, and open-source LLM runtimes on Apple Silicon. Covers Foundation Models (LanguageModelSession, @Generable, @Guide, SystemLanguageModel, structured output, tool calling), Core ML (coremltools, model conversion, quantization, palettization, pruning, Neural Engine, MLTensor), MLX Swift (transformer inference, unified memory), and llama.cpp (GGUF, cross-platform LLM). Use when building tool-calling AI features, working with guided generation schemas, converting models, or running on-device inference.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/apple-on-device-ai/SKILL.md
       groups: [ios]
+    - name: gstack
+      description: Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with elements, verify state, diff before/after, take annotated screenshots, test responsive layouts, forms, uploads, dialogs, and capture bug evidence. Use when asked to open or test a site, verify a deployment, dogfood a user flow, or file a bug with screenshots.
+      source: ./skills/gstack/SKILL.md
+      groups: [gstack]
+    - name: gstack-upgrade
+      description: Upgrade gstack to the latest version. Detects global vs vendored install, runs the upgrade, and shows whats new. Use when asked to upgrade gstack, update gstack, or get latest version.
+      source: ./skills/gstack/gstack-upgrade/SKILL.md
+      groups: [gstack]
+    - name: investigate
+      description: Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to debug this, fix this bug, why is this broken, investigate this error, or root cause analysis.
+      source: ./skills/gstack/investigate/SKILL.md
+      groups: [gstack]
     - name: authentication
       description: Implement iOS authentication patterns including Sign in with Apple (ASAuthorizationAppleIDProvider, ASAuthorizationController, ASAuthorizationAppleIDCredential), credential state checking, identity token validation, ASWebAuthenticationSession for OAuth and third-party auth flows, ASAuthorizationPasswordProvider for AutoFill credential suggestions, and biometric authentication with LAContext. Use when implementing Sign in with Apple, handling Apple ID credentials, building OAuth login flows, integrating Password AutoFill, checking credential revocation state, or validating identity tokens server-side.
       groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/authentication/SKILL.md
+    - name: land-and-deploy
+      description: Land and deploy workflow. Merges the PR, waits for CI and deploy, verifies production health via canary checks. Takes over after /ship creates the PR. Use when: merge, land, deploy, merge and verify, land it, ship it to production.
+      source: ./skills/gstack/land-and-deploy/SKILL.md
+      groups: [gstack]
     - name: background-processing
       description: Schedule and execute background work on iOS using BGTaskScheduler. Use when registering BGAppRefreshTask for short background fetches, BGProcessingTask for long-running maintenance, BGContinuedProcessingTask (iOS 26+) for foreground-started work that continues in background, background URLSession downloads, or background push notifications. Covers Info.plist configuration, expiration handling, task completion, and debugging with simulated launches.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/background-processing/SKILL.md
       groups: [ios]
+    - name: mermaid-diagrams
+      description: Create software diagrams using Mermaid syntax. Use for class diagrams, sequence diagrams, flowcharts, ERDs, C4 diagrams, state diagrams, and more. Triggers on diagram, visualize, model, show the flow, system architecture, database design.
+      source: ./skills/mermaid-diagrams/SKILL.md
+      groups: [diagrams, documentation]
+    - name: office-hours
+      description: YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to brainstorm this, I have an idea, help me think through this, office hours, or is this worth building.
+      source: ./skills/gstack/office-hours/SKILL.md
+      groups: [gstack]
     - name: callkit-voip
       description: Implement VoIP calling with CallKit and PushKit. Use when building incoming/outgoing call flows, registering for VoIP push notifications, configuring CXProvider and CXCallController, handling call actions, coordinating audio sessions, or creating Call Directory extensions for caller ID and call blocking.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/callkit-voip/SKILL.md
       groups: [ios]
+    - name: plan-ceo-review
+      description: CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, SCOPE REDUCTION. Use when asked to think bigger, expand scope, strategy review, rethink this, or is this ambitious enough.
+      source: ./skills/gstack/plan-ceo-review/SKILL.md
+      groups: [gstack]
+    - name: plan-design-review
+      description: Designers eye plan review — interactive, like CEO and Eng review. Rates each design dimension 0-10, explains what would make it a 10, then fixes the plan to get there. Works in plan mode. For live site visual audits, use /design-review. Use when asked to review the design plan or design critique.
+      source: ./skills/gstack/plan-design-review/SKILL.md
+      groups: [gstack]
+    - name: plan-eng-review
+      description: Eng manager-mode plan review. Lock in the execution plan — architecture, data flow, diagrams, edge cases, test coverage, performance. Walks through issues interactively with opinionated recommendations. Use when asked to review the architecture, engineering review, or lock in the plan.
+      source: ./skills/gstack/plan-eng-review/SKILL.md
+      groups: [gstack]
     - name: cloudkit-sync
       description: Implement, review, or improve CloudKit and iCloud sync in iOS/macOS apps. Use when working with CKContainer, CKRecord, CKQuery, CKSubscription, CKSyncEngine, CKShare, NSUbiquitousKeyValueStore, or iCloud Drive file coordination; when syncing SwiftData models via ModelConfiguration with cloudKitDatabase; when handling CKError codes for conflict resolution, network failures, or quota limits; or when checking iCloud account status before performing sync operations.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/cloudkit-sync/SKILL.md
       groups: [ios]
+    - name: qa
+      description: Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to qa, QA, test this site, find bugs, test and fix, or fix whats broken. Three tiers: Quick, Standard, Exhaustive. For report-only mode, use /qa-only.
+      source: ./skills/gstack/qa/SKILL.md
+      groups: [gstack]
+    - name: qa-only
+      description: Report-only QA testing. Systematically tests a web application and produces a structured report with health score, screenshots, and repro steps — but never fixes anything. Use when asked to just report bugs, qa report only, or test but dont fix. For the full test-fix-verify loop, use /qa instead.
+      source: ./skills/gstack/qa-only/SKILL.md
+      groups: [gstack]
     - name: contacts-framework
       description: Read, create, update, and pick contacts using the Contacts and ContactsUI frameworks. Use when fetching contact data, saving new contacts, wrapping CNContactPickerViewController in SwiftUI, handling contact permissions, or working with CNContactStore fetch and save requests.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/contacts-framework/SKILL.md
       groups: [ios]
+    - name: react-dev
+      description: Type-safe React development with TypeScript. Use when building React components, typing hooks, handling events, or working with React 18-19 features including Server Components, TanStack Router, or React Router.
+      source: ./skills/react-dev/SKILL.md
+      groups: [react, frontend]
+    - name: refactoring-patterns
+      description: This skill should be used when the user asks about refactoring, code smells, extract method, extract class, rename refactoring, move method, or when improving code structure without changing behavior. Provides Martin Fowlers refactoring catalog and code smell detection.
+      source: ./skills/refactoring-patterns/SKILL.md
+      groups: [development]
     - name: core-bluetooth
       description: Scan, connect, and communicate with Bluetooth Low Energy peripherals and publish local peripheral services using Core Bluetooth. Use when implementing BLE central or peripheral roles, discovering services and characteristics, reading and writing characteristic values, subscribing to notifications, configuring background BLE modes, restoring state after app relaunch, or working with CBCentralManager, CBPeripheral, CBPeripheralManager, CBService, CBCharacteristic, CBUUID, or Bluetooth Low Energy workflows.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-bluetooth/SKILL.md
       groups: [ios]
+    - name: retro
+      description: Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware: breaks down per-person contributions with praise and growth areas. Use when asked to weekly retro, what did we ship, or engineering retrospective.
+      source: ./skills/gstack/retro/SKILL.md
+      groups: [gstack]
+    - name: review
+      description: Pre-landing PR review. Analyzes diff against the base branch for SQL safety, LLM trust boundary violations, conditional side effects, and other structural issues. Use when asked to review this PR, code review, pre-landing review, or check my diff.
+      source: ./skills/gstack/review/SKILL.md
+      groups: [gstack]
     - name: core-motion
       description: Access accelerometer, gyroscope, magnetometer, pedometer, and activity-recognition data using CoreMotion. Use when reading device sensor data, counting steps, detecting user activity (walking/running/driving), tracking altitude changes, or implementing motion-based interactions in iOS/watchOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-motion/SKILL.md
       groups: [ios]
+    - name: ship
+      description: Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. Use when asked to ship, deploy, push to main, create a PR, or merge and push.
+      source: ./skills/gstack/ship/SKILL.md
+      groups: [gstack]
+    - name: setup-browser-cookies
+      description: Import cookies from your real Chromium browser into the headless browse session. Opens an interactive picker UI where you select which cookie domains to import. Use before QA testing authenticated pages. Use when asked to import cookies, login to the site, or authenticate the browser.
+      source: ./skills/gstack/setup-browser-cookies/SKILL.md
+      groups: [gstack]
+    - name: setup-deploy
+      description: Configure deployment settings for /land-and-deploy. Detects your deploy platform (Fly.io, Render, Vercel, Netlify, Heroku, GitHub Actions, custom), production URL, health check endpoints, and deploy status commands. Writes the configuration to CLAUDE.md so all future deploys are automatic. Use when: setup deploy, configure deployment, set up land-and-deploy, how do I deploy with gstack, add deploy config.
+      source: ./skills/gstack/setup-deploy/SKILL.md
+      groups: [gstack]
     - name: core-nfc
       description: Read and write NFC tags using CoreNFC. Use when scanning NDEF tags, reading ISO7816/ISO15693/FeliCa/MIFARE tags, writing NDEF messages, handling NFC session lifecycle, configuring NFC entitlements, or implementing background tag reading in iOS apps.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/core-nfc/SKILL.md
       groups: [ios]
+    - name: tailwind-design-system
+      description: Build scalable design systems with Tailwind CSS, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.
+      source: ./skills/tailwind-design-system/SKILL.md
+      groups: [frontend, design]
+    - name: unfreeze
+      description: Clear the freeze boundary set by /freeze, allowing edits to all directories again. Use when you want to widen edit scope without ending the session. Use when asked to unfreeze, unlock edits, remove freeze, or allow all edits.
+      source: ./skills/gstack/unfreeze/SKILL.md
+      groups: [gstack]
     - name: coreml
       description: Integrate and optimize Core ML models in iOS apps for on-device machine learning inference. Covers model loading (.mlmodelc, .mlpackage), predictions with auto-generated classes and MLFeatureProvider, compute unit configuration (CPU, GPU, Neural Engine), MLTensor, VNCoreMLRequest, MLComputePlan, multi-model pipelines, and deployment strategies. Use when loading Core ML models, making predictions, configuring compute units, or profiling model performance.
       groups: [ios]
@@ -263,5 +387,53 @@ library:
       description: Implement, review, or improve widgets, Live Activities, and controls using WidgetKit and ActivityKit. Use when building home screen, Lock Screen, or StandBy widgets with timeline providers; when creating interactive widgets with Button/Toggle and AppIntent actions; when adding Live Activities with Dynamic Island layouts (compact, minimal, expanded); when building Control Center widgets with ControlWidgetButton/ControlWidgetToggle; when configuring widget families, refresh budgets, deep links, push-based reloads, or Liquid Glass rendering; or when setting up widget extensions, App Groups, and entitlements.
       groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/widgetkit/SKILL.md
-  agents: []
-  prompts: []
+  agents:
+    - name: documenter
+      description: Documentation and README generation. Write clear, concise documentation. Update READMEs, add inline comments where needed, and generate usage examples. Match the projects existing doc style.
+      source: ./agents/documenter.md
+      groups: [development]
+    - name: plan-reviewer
+      description: Plan critic — reviews, challenges, and validates implementation plans. Identifies missing steps, edge cases, or dependencies the planner overlooked. Flags risks and evaluates feasibility.
+      source: ./agents/plan-reviewer.md
+      groups: [development]
+    - name: planner
+      description: Creates implementation plans from context and requirements. Produces clear implementation plans with numbered steps, acceptance criteria, and validation commands.
+      source: ./agents/planner.md
+      groups: [development]
+    - name: react-dev
+      description: A react developer subagent with full capabilities, isolated context. Works autonomously to complete assigned tasks using all available tools.
+      source: ./agents/react-dev.md
+      groups: [react, development]
+    - name: red-team
+      description: Security and adversarial testing. Find security vulnerabilities, edge cases, and failure modes. Check for injection risks, exposed secrets, missing validation, and unsafe defaults.
+      source: ./agents/red-team.md
+      groups: [security, development]
+    - name: scout
+      description: Fast codebase recon that returns compressed context for handoff. Quickly investigates a codebase and returns structured findings with file locations and dependencies.
+      source: ./agents/scout.md
+      groups: [development]
+    - name: ui-designer
+      description: Use when a task needs concrete UI decisions, interaction design, and implementation-ready design guidance. Produces design recommendation by screen/component, interaction-state notes, and implementation guidance.
+      source: ./agents/ui-designer.md
+      groups: [design, development]
+  prompts:
+    - name: commit
+      description: Create a new commit for all of our uncommitted changes. Run git status and diff to see what files are uncommitted, add the untracked and changed files, then add an atomic commit message with an appropriate tag such as feat, fix, docs, etc.
+      source: ./prompts/commit.md
+      groups: [git]
+    - name: create-prd
+      description: Generate a comprehensive Product Requirements Document (PRD) based on the current conversation context and requirements discussed.
+      source: ./prompts/create-prd.md
+      groups: [product]
+    - name: execute
+      description: Execute an implementation plan. Read the plan, analyze task dependencies, then implement tasks in the correct order.
+      source: ./prompts/execute.md
+      groups: [development]
+    - name: plan-feature
+      description: Transform a feature request into a comprehensive implementation plan through systematic codebase analysis, external research, and strategic planning.
+      source: ./prompts/plan-feature.md
+      groups: [development]
+    - name: prime
+      description: Get expertise context. Check if mulch and seeds are initialized and primed. If not, ask user if they should be initialized.
+      source: ./prompts/prime.md
+      groups: [base]
