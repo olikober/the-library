@@ -469,3 +469,31 @@ library:
       description: Get expertise context. Check if mulch and seeds are initialized and primed. If not, ask user if they should be initialized.
       source: ./prompts/prime.md
       groups: [base]
+    - name: build
+      description: Implement the next task incrementally — build, test, verify, commit
+      source: ./prompts/build.md
+      groups: [google-agent-skills]
+    - name: code-simplify
+      description: Simplify code for clarity and maintainability — reduce complexity without changing behavior
+      source: ./prompts/code-simplify.md
+      groups: [google-agent-skills]
+    - name: plan
+      description: Break work into small verifiable tasks with acceptance criteria and dependency ordering
+      source: ./prompts/plan.md
+      groups: [google-agent-skills]
+    - name: review
+      description: Conduct a five-axis code review — correctness, readability, architecture, security, performance
+      source: ./prompts/review.md
+      groups: [google-agent-skills]
+    - name: ship
+      description: Run the pre-launch checklist and prepare for production deployment
+      source: ./prompts/ship.md
+      groups: [google-agent-skills]
+    - name: spec
+      description: Start spec-driven development — write a structured specification before writing code
+      source: ./prompts/spec.md
+      groups: [google-agent-skills]
+    - name: test
+      description: Run TDD workflow — write failing tests, implement, verify. For bugs, use the Prove-It pattern.
+      source: ./prompts/test.md
+      groups: [google-agent-skills]
