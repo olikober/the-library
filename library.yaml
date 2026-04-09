@@ -1,13 +1,13 @@
 default_dirs:
   skills:
-    - default: .agents/skills/
-    - global: ~/.agents/skills/
+    - default: .pi/skills/
+    - global: ~/.pi/agent/skills/
   agents:
     - default: .agents/agents/
     - global: ~/.agents/agents/
   prompts:
-    - default: .agents/commands/
-    - global: ~/.agents/commands/
+    - default: .pi/prompts/
+    - global: ~/.pi/agent/prompts/
 
 library:
   skills:
@@ -18,7 +18,7 @@ library:
     - name: gstack-browse
       description: Fast headless browser for QA testing and site dogfooding. Navigate any URL, interact with elements, verify page state, diff before/after actions, take annotated screenshots, check responsive layouts, test forms and uploads, handle dialogs, and assert element states. ~100ms per command. Use when asked to open in browser, test the site, take a screenshot, or dogfood this.
       source: ./skills/gstack-browse/SKILL.md
-      groups: [gstack] 
+      groups: [gstack]
     - name: app-clips
       description: Build iOS App Clips with invocation URLs, NFC, QR codes, App Clip Codes, Safari banners, Maps, Messages, and shared App Group data handoff to the full app. Covers target setup, experience configuration, size limits, NSUserActivity handling, SKOverlay promotion, location confirmation, and capability limits. Use when creating App Clips or wiring App Clip invocation and full-app migration.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-clips/SKILL.md
@@ -28,11 +28,11 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/app-intents/SKILL.md
       groups: [ios]
     - name: gstack-design-consultation
-      description: Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your projects design source of truth. Use when asked to design system, brand guidelines, or create DESIGN.md.
+      description: "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your projects design source of truth. Use when asked to design system, brand guidelines, or create DESIGN.md."
       source: ./skills/gstack-design-consultation/SKILL.md
       groups: [gstack]
     - name: gstack-design-review
-      description: Designers eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. Use when asked to audit the design, visual QA, check if it looks good, or design polish.
+      description: "Designers eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. Use when asked to audit the design, visual QA, check if it looks good, or design polish."
       source: ./skills/gstack-design-review/SKILL.md
       groups: [gstack]
     - name: gstack-document-release
@@ -52,7 +52,7 @@ library:
       source: ./skills/gstack-SKILL.md
       groups: [gstack]
     - name: gstack-investigate
-      description: Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to debug this, fix this bug, why is this broken, investigate this error, or root cause analysis.
+      description: "Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to debug this, fix this bug, why is this broken, investigate this error, or root cause analysis."
       source: ./skills/gstack-investigate/SKILL.md
       groups: [gstack]
     - name: authentication
@@ -68,7 +68,7 @@ library:
       source: ./skills/mermaid-diagrams/SKILL.md
       groups: [diagrams, documentation]
     - name: gstack-office-hours
-      description: YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to brainstorm this, I have an idea, help me think through this, office hours, or is this worth building.
+      description: "YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to brainstorm this, I have an idea, help me think through this, office hours, or is this worth building."
       source: ./skills/gstack-office-hours/SKILL.md
       groups: [gstack]
     - name: callkit-voip
@@ -76,7 +76,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/callkit-voip/SKILL.md
       groups: [ios]
     - name: gstack-plan-ceo-review
-      description: CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, SCOPE REDUCTION. Use when asked to think bigger, expand scope, strategy review, rethink this, or is this ambitious enough.
+      description: "CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION, SELECTIVE EXPANSION, HOLD SCOPE, SCOPE REDUCTION. Use when asked to think bigger, expand scope, strategy review, rethink this, or is this ambitious enough."
       source: ./skills/gstack-plan-ceo-review/SKILL.md
       groups: [gstack]
     - name: gstack-plan-design-review
@@ -92,7 +92,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/cloudkit-sync/SKILL.md
       groups: [ios]
     - name: gstack-qa
-      description: Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to qa, QA, test this site, find bugs, test and fix, or fix whats broken. Three tiers: Quick, Standard, Exhaustive. For report-only mode, use /qa-only.
+      description: "Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to qa, QA, test this site, find bugs, test and fix, or fix whats broken. Three tiers: Quick, Standard, Exhaustive. For report-only mode, use /qa-only."
       source: ./skills/gstack-qa/SKILL.md
       groups: [gstack]
     - name: gstack-qa-only
@@ -171,6 +171,18 @@ library:
       description: Secure iOS apps with Keychain Services, CryptoKit encryption, biometric authentication (Face ID, Touch ID), Secure Enclave key storage, LAContext, App Transport Security (ATS), certificate pinning, data protection classes, and secure coding patterns. Use when implementing app security features, auditing privacy manifests, configuring App Transport Security, securing keychain access, adding biometric authentication, or encrypting sensitive data with CryptoKit.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/ios-security/SKILL.md
       groups: [ios]
+    - name: macos-menubar-app
+      description: Build macOS menu bar-only utility apps using SwiftUI's MenuBarExtra. Use when creating menu bar apps, status bar utilities, or apps without Dock presence. Covers MenuBarExtra, status items, menu content views, state management, and app configuration for LSUIElement.
+      source: ./skills/macos-menubar-app/SKILL.md
+      groups: [macos, swiftui]
+    - name: openrouter-api
+      description: Integrate with OpenRouter API to fetch credit balances, manage API keys, and monitor usage. Use when building apps that need OpenRouter credit information, authenticating with Bearer tokens, and handling API responses.
+      source: ./skills/openrouter-api/SKILL.md
+      groups: [api, networking]
+    - name: keychain-storage
+      description: Securely store and retrieve sensitive data (API keys, tokens, passwords) using Apple's Keychain Services API. Use when implementing secure credential storage in macOS/iOS apps with SecItemAdd, SecItemCopyMatching, and proper accessibility levels.
+      source: ./skills/keychain-storage/SKILL.md
+      groups: [security, macos, ios]
     - name: live-activities
       description: Implement, review, or improve Live Activities and Dynamic Island experiences in iOS apps using ActivityKit. Use when building real-time updating widgets for the Lock Screen and Dynamic Island — delivery tracking, sports scores, ride-sharing status, workout timers, media playback, or any time-sensitive information that updates in real time. Also use when working with ActivityKit, ActivityAttributes, Activity lifecycle (request/update/end), Dynamic Island layouts (compact/minimal/expanded), push-to-update Live Activities, or Lock Screen live widgets.
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/live-activities/SKILL.md
@@ -251,7 +263,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-charts/SKILL.md
       groups: [ios]
     - name: swift-codable
-      description: Implement Swift Codable models for JSON and property-list encoding and decoding with JSONDecoder, JSONEncoder, CodingKeys, and custom init(from:) or encode(to:). Use when parsing API responses, remapping keys, flattening nested JSON, handling date or data decoding strategies, decoding heterogeneous arrays, or integrating Codable with URLSession, SwiftData, or UserDefaults.
+      description: "Implement Swift Codable models for JSON and property-list encoding and decoding with JSONDecoder, JSONEncoder, CodingKeys, and custom init(from:) or encode(to:). Use when parsing API responses, remapping keys, flattening nested JSON, handling date or data decoding strategies, decoding heterogeneous arrays, or integrating Codable with URLSession, SwiftData, or UserDefaults."
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-codable/SKILL.md
       groups: [ios]
     - name: swift-concurrency
@@ -259,7 +271,7 @@ library:
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-concurrency/SKILL.md
       groups: [ios]
     - name: swift-language
-      description: Apply modern Swift language patterns and idioms for non-concurrency, non-SwiftUI code. Covers if/switch expressions (Swift 5.9+), typed throws (Swift 6+), result builders, property wrappers, opaque and existential types (some vs any), guard patterns, Never type, Regex builders (Swift 5.7+), Codable best practices (CodingKeys, custom decoding, nested containers), modern collection APIs (count(where:), contains(where:), replacing()), FormatStyle (.formatted() on dates, numbers, measurements), and string interpolation patterns. Use when writing core Swift code involving generics, protocols, enums, closures, or modern language features.
+      description: "Apply modern Swift language patterns and idioms for non-concurrency, non-SwiftUI code. Covers if/switch expressions (Swift 5.9+), typed throws (Swift 6+), result builders, property wrappers, opaque and existential types (some vs any), guard patterns, Never type, Regex builders (Swift 5.7+), Codable best practices (CodingKeys, custom decoding, nested containers), modern collection APIs (count(where:), contains(where:), replacing()), FormatStyle (.formatted() on dates, numbers, measurements), and string interpolation patterns. Use when writing core Swift code involving generics, protocols, enums, closures, or modern language features."
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swift-language/SKILL.md
       groups: [ios]
     - name: swift-testing
@@ -271,7 +283,7 @@ library:
       groups: [ios]
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftdata/SKILL.md
     - name: swiftui-animation
-      description: Implement, review, or improve SwiftUI animations and transitions. Use when adding explicit animations with withAnimation, configuring implicit animations with .animation(_:body:) or .animation(_:value:), configuring spring animations (.smooth, .snappy, .bouncy), building phase or keyframe animations with PhaseAnimator/KeyframeAnimator, creating hero transitions with matchedGeometryEffect or matchedTransitionSource, adding SF Symbol effects (bounce, pulse, variableColor, breathe, rotate, wiggle), implementing custom Transition or CustomAnimation types, or ensuring animations respect accessibilityReduceMotion.
+      description: "Implement, review, or improve SwiftUI animations and transitions. Use when adding explicit animations with withAnimation, configuring implicit animations with .animation(_:body:) or .animation(_:value:), configuring spring animations (.smooth, .snappy, .bouncy), building phase or keyframe animations with PhaseAnimator/KeyframeAnimator, creating hero transitions with matchedGeometryEffect or matchedTransitionSource, adding SF Symbol effects (bounce, pulse, variableColor, breathe, rotate, wiggle), implementing custom Transition or CustomAnimation types, or ensuring animations respect accessibilityReduceMotion."
       source: https://github.com/dpearson2699/swift-ios-skills/blob/main/skills/swiftui-animation/SKILL.md
       groups: [ios]
     - name: swiftui-gestures
@@ -314,6 +326,86 @@ library:
       description: Write clearly and concisely by removing redundant words, preferring active voice, using concrete language, and structuring sentences for clarity.
       source: ./skills/writing-clearly-and-concisely/SKILL.md
       groups: [base]
+    - name: api-and-interface-design
+      description: Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.
+      source: ./skills/api-and-interface-design/SKILL.md
+      groups: [google-agent-skills]
+    - name: browser-testing-with-devtools
+      description: Tests in real browsers. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data via Chrome DevTools MCP.
+      source: ./skills/browser-testing-with-devtools/SKILL.md
+      groups: [google-agent-skills]
+    - name: ci-cd-and-automation
+      description: Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.
+      source: ./skills/ci-cd-and-automation/SKILL.md
+      groups: [google-agent-skills]
+    - name: code-review-and-quality
+      description: Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.
+      source: ./skills/code-review-and-quality/SKILL.md
+      groups: [google-agent-skills]
+    - name: code-simplification
+      description: Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.
+      source: ./skills/code-simplification/SKILL.md
+      groups: [google-agent-skills]
+    - name: context-engineering
+      description: Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.
+      source: ./skills/context-engineering/SKILL.md
+      groups: [google-agent-skills]
+    - name: debugging-and-error-recovery
+      description: Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.
+      source: ./skills/debugging-and-error-recovery/SKILL.md
+      groups: [google-agent-skills]
+    - name: deprecation-and-migration
+      description: Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.
+      source: ./skills/deprecation-and-migration/SKILL.md
+      groups: [google-agent-skills]
+    - name: documentation-and-adrs
+      description: Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.
+      source: ./skills/documentation-and-adrs/SKILL.md
+      groups: [google-agent-skills]
+    - name: frontend-ui-engineering
+      description: Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.
+      source: ./skills/frontend-ui-engineering/SKILL.md
+      groups: [google-agent-skills]
+    - name: git-workflow-and-versioning
+      description: Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.
+      source: ./skills/git-workflow-and-versioning/SKILL.md
+      groups: [google-agent-skills]
+    - name: idea-refine
+      description: Refines ideas iteratively. Refine ideas through structured divergent and convergent thinking. Use "idea-refine" or "ideate" to trigger.
+      source: ./skills/idea-refine/SKILL.md
+      groups: [google-agent-skills]
+    - name: incremental-implementation
+      description: Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you are about to write a large amount of code at once, or when a task feels too big to land in one step.
+      source: ./skills/incremental-implementation/SKILL.md
+      groups: [google-agent-skills]
+    - name: performance-optimization
+      description: Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.
+      source: ./skills/performance-optimization/SKILL.md
+      groups: [google-agent-skills]
+    - name: planning-and-task-breakdown
+      description: Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.
+      source: ./skills/planning-and-task-breakdown/SKILL.md
+      groups: [google-agent-skills]
+    - name: security-and-hardening
+      description: Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.
+      source: ./skills/security-and-hardening/SKILL.md
+      groups: [google-agent-skills]
+    - name: shipping-and-launch
+      description: Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.
+      source: ./skills/shipping-and-launch/SKILL.md
+      groups: [google-agent-skills]
+    - name: spec-driven-development
+      description: Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.
+      source: ./skills/spec-driven-development/SKILL.md
+      groups: [google-agent-skills]
+    - name: test-driven-development
+      description: Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you are about to modify existing functionality.
+      source: ./skills/test-driven-development/SKILL.md
+      groups: [google-agent-skills]
+    - name: using-agent-skills
+      description: Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.
+      source: ./skills/using-agent-skills/SKILL.md
+      groups: [google-agent-skills]
 
     - name: vision-framework
       description: Implement computer vision features including text recognition (OCR), face detection, barcode scanning, image segmentation, object tracking, and document scanning in iOS apps. Covers both the modern Swift-native Vision API (iOS 16+) and legacy VNRequest patterns, VisionKit DataScannerViewController for live camera scanning, and VNCoreMLRequest for custom model inference. Use when adding OCR, barcode scanning, face detection, or custom Core ML model inference with Vision.
