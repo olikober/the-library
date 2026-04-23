@@ -398,6 +398,9 @@ library:
       description: Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.
       source: ./skills/spec-driven-development/SKILL.md
       groups: [google-agent-skills]
+    - name: spec-to-screen-catalog
+      description: Use when a technical or design spec exists and a product designer needs a screen-by-screen, state-by-state catalog to mock up in Figma. Produces a handoff doc enumerating every screen, every state (empty, loading, populated, error, permission-denied, 404, auth-gated, etc.), and what is visible in each. Not for generating code or AI-tool prompts — the output is intended for a human designer.
+      source: ./skills/spec-to-screen-catalog/SKILL.md
     - name: test-driven-development
       description: Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you are about to modify existing functionality.
       source: ./skills/test-driven-development/SKILL.md
