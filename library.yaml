@@ -500,3 +500,7 @@ library:
       description: Run TDD workflow — write failing tests, implement, verify. For bugs, use the Prove-It pattern.
       source: ./prompts/test.md
       groups: [google-agent-skills]
+    - name: writing-great-skills
+      description: Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable. Use when creating new skills, editing skill SKILL.md files, choosing between model-invoked and user-invoked skills, or improving skill descriptions and structure. Triggers on create skill, write skill, meta-skill, skill authoring, how to write a skill.
+      source: https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md
+      groups: [productivity]
